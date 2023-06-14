@@ -33,7 +33,7 @@ const searchPokemon = () => {
           console.log(response);
           }
          );
-    // const checkPokemon = () => {
+    // const checkPokemon = () => {d
     //   if(setPokemonName(event.target.value) != response.data.name){
     //     <h1>This pokemon does not exist</h1>
     //   }else{
