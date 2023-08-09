@@ -3,21 +3,16 @@
 
 
 *{
-  /* box-sizing: border-box; */
   margin: 0px;
   padding: 0px;
   font-family: 'Press Start 2P', cursive;
 }
-
 .app {
   text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
   box-sizing: border-box;
-  font-family: 'andy-bold', sans-serif;
-
-
 }
 .titleSection{
   background-color: #FF1F1F;
@@ -36,7 +31,12 @@
   height: 20px;
   padding-left: 5px;
 }
-
+input:focus{
+  min-height: 20px!important;
+}
+input:focus::placeholder{
+color: transparent;
+}
 .titleSection button{
   width: 180px;
   border-radius: 5px;
@@ -44,21 +44,48 @@
   margin: 5px;
   padding: 5px;
 
-
 }
 .titleSection button:hover {
   cursor: pointer;
   background-color: black;
   color: white;
-  margin-top: 2px;
+  margin-top: 10px;
 }
 .displaySection {
   margin: 15px;
 }
 .displaySection img{
+  background: url('./pokeball.png');
+  background-size: contain;
   height: 150px;
   width: 150px;
+  margin:10px;
+  padding:0px,
 }
 .displaySection h3{
   margin: 10px;
+}
+.autoContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 1);
+  border: 2px black;
+  width: 40%;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px)
+{
+  .autoContainer{
+  width:70%;
+  }
+}
+.option:hover{
+  background-color: red;
+}
+.option{
+display: flex;
+align-items: center;
+justify-content:space-around;
+border: 1px black solid;
 }
