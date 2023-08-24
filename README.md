@@ -5,6 +5,7 @@ I learned a lot about ternary operators, destructing API calls, filter and map f
 
 # Features
 Contains three API calls
+
 One to return base stats and basic information about an inputted pokemon
 One to generate an autocomplete function
 One to highlight evolutions. 
