@@ -57,6 +57,7 @@ const App = () => {
   }, []);
 
   useEffect(() => {
+    // this currently only works for pokemon that evolve from a base form on levelling up
     const evolve = [];
     const evolutionPromises = new Array(151).fill().map((value, i) => fetch(`https://pokeapi.co/api/v2/evolution-chain/${i + 1}`))
     Promise.all(evolutionPromises).then((evolveArray) => {
@@ -137,9 +138,9 @@ const App = () => {
             <h3>Special Attack: {pokemon.specialattack}</h3>
             <h3>Special Defense: {pokemon.specialdefense}</h3>
             <h3>Speed: {pokemon.speed}</h3>
-            {
-              evolution.filter(({base}) => base == pokemon.name).map(value => (<h3>Evolves to {value.evolvesTo} at level {value.level}</h3>))
-            }
+            // {
+            //   evolution.filter(({base}) => base == pokemon.name).map(value => (<h3>Evolves to {value.evolvesTo} at level {value.level}</h3>))
+            // }
           </>)}
       </div>
     </div>
